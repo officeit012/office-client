@@ -236,7 +236,7 @@ const ProductDetailPage = () => {
                       );
                     }
                   }}
-                  className={`flex items-center justify-center text-center py-3 px-6 rounded-md font-medium transition-colors ${
+                  className={`flex items-center justify-center text-center text-sm py-3 px-3 rounded-md font-medium transition-colors ${
                     product.availability === "In Stock"
                       ? "bg-purple-600 text-white hover:bg-purple-700"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
@@ -250,7 +250,7 @@ const ProductDetailPage = () => {
                   to={`/products?category=${encodeURIComponent(
                     product.category
                   )}`}
-                  className="flex items-center justify-center text-center px-6 py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors font-medium"
+                  className="flex items-center justify-center text-center text-sm py-3 px-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors font-medium"
                 >
                   View Similar
                 </Link>
