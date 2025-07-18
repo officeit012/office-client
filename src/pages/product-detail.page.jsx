@@ -134,10 +134,10 @@ const ProductDetailPage = () => {
         </Link>
 
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="md:flex">
+          <div className="lg:flex">
             {/* Product Image */}
-            <div className="md:w-1/2">
-              <div className="h-64 md:h-96 lg:h-[500px] relative">
+            <div className="lg:w-1/2">
+              <div className="h-64 lg:h-96 lg:h-[500px] relative">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -154,21 +154,21 @@ const ProductDetailPage = () => {
             </div>
 
             {/* Product Details */}
-            <div className="md:w-1/2 p-6 md:p-8">
+            <div className="lg:w-1/2 p-6 lg:p-8">
               <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
                   {product.category}
                 </span>
               </div>
 
-              <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                 {product.name}
               </h1>
 
               <div className="mb-6">
                 {hasDiscount ? (
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl md:text-3xl font-bold text-red-600">
+                    <span className="text-2xl lg:text-3xl font-bold text-red-600">
                       Rs. {formatPrice(product.discount)}
                     </span>
                     <span className="text-lg text-gray-500 line-through">
@@ -176,7 +176,7 @@ const ProductDetailPage = () => {
                     </span>
                   </div>
                 ) : (
-                  <span className="text-2xl md:text-3xl font-bold text-gray-900">
+                  <span className="text-2xl lg:text-3xl font-bold text-gray-900">
                     Rs. {formatPrice(product.price)}
                   </span>
                 )}
@@ -236,7 +236,7 @@ const ProductDetailPage = () => {
                       );
                     }
                   }}
-                  className={`flex-1 py-3 px-6 rounded-md font-medium transition-colors ${
+                  className={`flex items-center justify-center text-center py-3 px-6 rounded-md font-medium transition-colors ${
                     product.availability === "In Stock"
                       ? "bg-purple-600 text-white hover:bg-purple-700"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
@@ -250,7 +250,7 @@ const ProductDetailPage = () => {
                   to={`/products?category=${encodeURIComponent(
                     product.category
                   )}`}
-                  className="px-6 py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors font-medium"
+                  className="flex items-center justify-center text-center px-6 py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors font-medium"
                 >
                   View Similar
                 </Link>
