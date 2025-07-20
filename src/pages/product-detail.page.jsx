@@ -137,7 +137,7 @@ const ProductDetailPage = () => {
           <div className="lg:flex">
             {/* Product Image */}
             <div className="lg:w-1/2">
-              <div className="h-64 lg:h-96 lg:h-[500px] relative">
+              <div className="h-64 lg:h-[500px] relative">
                 <img
                   src={product.image}
                   alt={product.name}
