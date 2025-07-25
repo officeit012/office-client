@@ -132,6 +132,8 @@ const AddProductModal = ({
   };
 
   const uploadImageToCloudinary = async () => {
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
     if (!selectedFile) return null;
 
     setUploadingImage(true);
@@ -139,13 +141,10 @@ const AddProductModal = ({
       const formData = new FormData();
       formData.append("image", selectedFile);
 
-      const response = await fetch(
-        "https://office-server-eight.vercel.app/api/products/upload-image",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch(`${BACKEND_URL}/api/products/upload-image`, {
+        method: "POST",
+        body: formData,
+      });
 
       if (!response.ok) {
         throw new Error("Failed to upload image");
