@@ -140,7 +140,7 @@ const AddProductModal = ({
       formData.append("image", selectedFile);
 
       const response = await fetch(
-        "http://localhost:8000/api/products/upload-image",
+        "https://office-server-eight.vercel.app/api/products/upload-image",
         {
           method: "POST",
           body: formData,
